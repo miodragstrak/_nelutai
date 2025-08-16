@@ -110,29 +110,6 @@
     </div>
     </div>
 
- 
-    <style>
-  .chatbox { position: fixed; bottom: 16px; right: 16px; width: 320px; max-height: 60vh;
-             background:#fff; border:1px solid #e5e7eb; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.12); display:flex; flex-direction:column; }
-  .chathead { padding:12px 14px; font-weight:600; border-bottom:1px solid #eee; }
-  .chatmsgs { padding:10px; overflow:auto; flex:1; font-size:14px; }
-  .chatmsg { margin:8px 0; line-height:1.4 }
-  .chatmsg.user { text-align:right }
-  .chatinput { display:flex; border-top:1px solid #eee }
-  .chatinput input { flex:1; border:0; padding:10px; font-size:14px; outline:none }
-  .chatinput button { border:0; background:#10b981; color:#fff; padding:0 12px; cursor:pointer; }
-</style>
-
-<div class="chatbox" id="nelutai">
-  <div class="chathead">NelutAI</div>
-  <div class="chatmsgs" id="chatmsgs"></div>
-  <div class="chatinput">
-    <input id="chatinp" placeholder="Ask about a city, e.g. 'Events in Vranje today'"/>
-    <button id="chatsend">Send</button>
-  </div>
-</div>
-
-
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
