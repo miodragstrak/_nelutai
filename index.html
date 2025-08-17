@@ -110,20 +110,28 @@
     </div>
     </div>
 
-<script src="/path/to/n8n-brandable-chatbox.js"></script>
-<script>
-  const api = window.N8NbrandableChatbox.init({
-    webhookUrl: "https://mstrak.app.n8n.cloud/webhook/d533365b-fa92-4443-a4ec-ec1f19a0ad10/chat",
-    botName: "NelutAI",
-    brandColor: "#2563eb",
-    accentColor: "#0ea5e9",
-    launcherVariant: "icon-text",
-    launcherText: "Chat with us",
-    allowHTMLInResponses: true
-  });
-  // api.open(); api.close(); api.toggle(); api.send("Hi"); api.clear(); api.getSessionId();
-</script>
 
+
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<div id="n8n-chat"></div>
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://mstrak.app.n8n.cloud/webhook/d533365b-fa92-4443-a4ec-ec1f19a0ad10/chat', // Chat Trigger URL
+    target: '#n8n-chat',          // default is '#n8n-chat'
+    mode: 'window',               // 'window' or 'fullscreen'
+    loadPreviousSession: true,    // keep chat history per user
+    showWelcomeScreen: false,
+    initialMessages: [
+      'Hi! I’m NelutAI — your Serbia travel assistant. Ask me about events, attractions, transport, or food.'
+    ],
+    // Optional:
+    // enableStreaming: true,
+    // webhookConfig: { method: 'POST', headers: { } },
+    // metadata: { source: 'gh-pages' },
+  });
+</script>
 </body>
 
 </html>
